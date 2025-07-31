@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Full HTML Form Example</title>
+</head>
+<body>
+
+  <h2>Professional Registration Form</h2>
+
+  <form 
+    action="https://example.com/submit"    
+    method="post"                          
+    enctype="multipart/form-data"          
+    target="_blank"                        
+    autocomplete="on"                      
+    novalidate                             
+    name="registrationForm"                
+    accept-charset="UTF-8"                  
+    rel="external">                         
+
+    <!-- Name Field -->
+    <label for="fullname">Full Name:</label><br>
+    <input type="text" id="fullname" name="fullname" placeholder="Enter your name" required><br><br>
+
+    <!-- Email Field -->
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <!-- Password Field -->
+    <label for="password">Password:</label><br>
+    <input type="password" id="password" name="password" minlength="6" required><br><br>
+
+    <!-- File Upload -->
+    <label for="resume">Upload Resume:</label><br>
+    <input type="file" id="resume" name="resume"><br><br>
+
+    <!-- Gender (Radio Buttons) -->
+    <label>Gender:</label><br>
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male">Male</label><br>
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">Female</label><br><br>
+
+    <!-- Skills (Checkboxes) -->
+    <label>Skills:</label><br>
+    <input type="checkbox" name="skills" value="html"> HTML<br>
+    <input type="checkbox" name="skills" value="css"> CSS<br>
+    <input type="checkbox" name="skills" value="js"> JavaScript<br><br>
+
+    <!-- Country Dropdown -->
+    <label for="country">Country:</label><br>
+    <select id="country" name="country">
+      <option value="india">India</option>
+      <option value="usa">USA</option>
+      <option value="uk">UK</option>
+    </select><br><br>
+
+    <!-- Textarea -->
+    <label for="comments">Comments:</label><br>
+    <textarea id="comments" name="comments" rows="4" cols="30"></textarea><br><br>
+
+    <!-- Submit and Reset Buttons -->
+    <input type="submit" value="Register">
+    <input type="reset" value="Clear">
+
+  </form>
+
+</body>
+</html>
