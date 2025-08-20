@@ -7,8 +7,8 @@
     </head>
     <body>
           <h2>Professional Registration Form</h2>
-          <form>
-             <!-- Name Field -->
+    <form>
+   <!-- Name Field -->
     <label for="fullname">Full Name:</label><br>
     <input type="text" id="fullname" name="fullname" placeholder="Enter your name" required><br><br>
     <!-- Email Field -->
@@ -17,7 +17,10 @@
     <!--password field-->
     <label for="password">Password</label><br>
     <input type="password" id="password" name="password" minlength="6" required><br><br>
-    
+    <label for="class">Class:</label><br>
+   <input type="text" id="class" name="class" value="II-CSE B" disabled><br>
+
+
     <!-- Gender (Radio Buttons) -->
     <label>Gender:</label><br>
     <input type="radio" id="male" name="gender" value="male">
@@ -34,7 +37,16 @@
     <input type="checkbox" name="skills" value="html"> JavaScript<br>
     <input type="checkbox" name="skills" value="html"> Genral Google Office <br>
 
+    
+    <!-- Textarea -->
+    <label for="comments">Comments:</label><br>
+    <textarea id="comments" name="comments" rows="4" cols="30"></textarea><br><br>
 
+    <!-- Submit and Reset Buttons -->
+    <input type="submit" value="Register">
+    <input type="reset" value="Clear">
+    <input type="hidden" name="form_id" value="registrationForm">
+    <input type="hidden" name="form_version" value="1.0">   
 </form>
     </body>
 </html>

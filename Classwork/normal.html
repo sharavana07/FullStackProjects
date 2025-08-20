@@ -1,0 +1,56 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" 
+  "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <title>Form</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  </head>
+  <body>
+    <h2>Professional Registration Form</h2>
+    <form action="" method="post">
+      <!-- Name Field -->
+      <label for="fullname">Full Name:</label><br>
+      <input type="text" id="fullname" name="fullname"><br><br>
+
+      <!-- Email Field -->
+      <label for="email">Email:</label><br>
+      <input type="text" id="email" name="email"><br><br>
+
+      <!-- Password Field -->
+      <label for="password">Password:</label><br>
+      <input type="password" id="password" name="password"><br><br>
+
+      <!-- Class Field (Disabled) -->
+      <label for="class">Class:</label><br>
+      <input type="text" id="class" name="class" value="II-CSE B" disabled><br><br>
+
+      <!-- Gender (Radio Buttons) -->
+      <label>Gender:</label><br>
+      <input type="radio" id="male" name="gender" value="male">
+      <label for="male">Male</label><br>
+      <input type="radio" id="female" name="gender" value="female">
+      <label for="female">Female</label><br><br>
+
+      <!-- Skills (Checkboxes) -->
+      <label>Skills:</label><br>
+      <input type="checkbox" name="skills" value="html"> HTML<br>
+      <input type="checkbox" name="skills" value="java"> Java<br>
+      <input type="checkbox" name="skills" value="css"> CSS<br>
+      <input type="checkbox" name="skills" value="python"> Python<br>
+      <input type="checkbox" name="skills" value="js"> JavaScript<br>
+      <input type="checkbox" name="skills" value="google"> General Google Office<br><br>
+
+      <!-- Textarea -->
+      <label for="comments">Comments:</label><br>
+      <textarea id="comments" name="comments" rows="4" cols="30"></textarea><br><br>
+
+      <!-- Submit and Reset Buttons -->
+      <input type="submit" value="Register">
+      <input type="reset" value="Clear">
+
+      <!-- Hidden Inputs -->
+      <input type="hidden" name="form_id" value="registrationForm">
+      <input type="hidden" name="form_version" value="1.0">
+    </form>
+  </body>
+</html>
