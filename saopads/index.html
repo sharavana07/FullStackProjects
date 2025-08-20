@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AquaPure Lux – Silk-foam Soap</title>
+  <meta name="description" content="A premium, dermatologically-tested soap advertisement page with modern, responsive UI." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0a0f1e;
+      --card:#111936cc; 
+      --text:#e8ecf1;
+      --muted:#b6c2d0;
+      --brand:#7dd3fc;   
+      --brand-2:#a78bfa; 
+      --accent:#22d3ee;  
+      --success:#34d399; 
+      --warning:#fbbf24; 
+      --shadow: 0 20px 45px rgba(0,0,0,.35);
+      --shadow-hover: 0 25px 60px rgba(0,0,0,.45);
+      --shadow-glow: 0 0 30px rgba(125,211,252,.2);
+      --radius-2xl: 1.25rem;
+      --radius-3xl: 1.75rem;
+      --glass-bg: rgba(17, 25, 54, 0.8);
+      --glass-border: rgba(34, 48, 74, 0.6);
+    }
+    
+    *{
+      box-sizing:border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    html{
+      scroll-behavior: smooth;
+    }
+    
+    html,body{height:100%}
+    
+    body{
+      margin:0;
+      font-family:"Plus Jakarta Sans", system-ui,-apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      color:var(--text);
+      background: 
+        radial-gradient(1400px 900px at 15% 5%, #12213b 0%, transparent 55%),
+        radial-gradient(1400px 900px at 85% 0%, #201538 0%, transparent 55%),
+        radial-gradient(1200px 800px at 5% 95%, #0b2a39 0%, transparent 50%),
+        radial-gradient(800px 600px at 95% 90%, #1a0b2e 0%, transparent 40%),
+        var(--bg);
+      overflow-x:hidden;
+      position: relative;
+    }
+
+    /* Enhanced floating particles */
+    .particle{
+      position:absolute;
+      border-radius:50%;
+      pointer-events: none;
+      z-index: 1;
+    }
+    
+    .bubble{
+      position:absolute;
+      border-radius:999px;
+      filter:blur(.5px);
+      opacity:.25;
+      animation:float 20s ease-in-out infinite;
+      pointer-events: none;
+      z-index: 1;
+    }
+    .bubble.b1{width:180px;height:180px;left:8%;top:15%;background:linear-gradient(135deg,#7dd3fc35,#a78bfa35);animation-delay:0s}
+    .bubble.b2{width:110px;height:110px;left:75%;top:8%;background:linear-gradient(135deg,#22d3ee45,#7dd3fc35);animation-delay:3s}
+    .bubble.b3{width:140px;height:140px;left:82%;top:65%;background:linear-gradient(135deg,#a78bfa35,#22d3ee35);animation-delay:6s}
+    .bubble.b4{width:90px;height:90px;left:15%;top:75%;background:linear-gradient(135deg,#34d39935,#7dd3fc35);animation-delay:9s}
+    .bubble.b5{width:60px;height:60px;left:45%;top:85%;background:linear-gradient(135deg,#fbbf2435,#22d3ee35);animation-delay:12s}
+    .bubble.b6{width:200px;height:200px;left:60%;top:25%;background:linear-gradient(135deg,#7dd3fc25,#a78bfa25);animation-delay:15s}
+    
+    @keyframes float{
+      0%,100%{transform:translateY(0) translateX(0) rotate(0deg)}
+      25%{transform:translateY(-30px) translateX(15px) rotate(90deg)}
+      50%{transform:translateY(-15px) translateX(-10px) rotate(180deg)}
+      75%{transform:translateY(-25px) translateX(20px) rotate(270deg)}
+    }
+
+    .container{max-width:1200px;margin:0 auto;padding:24px;position: relative;z-index: 10;}
+
+    /* Enhanced Header with glassmorphism */
+    header{
+      position:fixed;
+      top:0;
+      left:0;
+      right:0;
+      backdrop-filter:saturate(180%) blur(20px);
+      background:rgba(10,15,30,0.85);
+      border-bottom:1px solid rgba(34,48,74,0.5);
+      z-index:100;
+      transition: all 0.3s ease;
+    }
+    
+    header.scrolled{
+      background:rgba(10,15,30,0.95);
+      box-shadow: var(--shadow);
+    }
+    
+    .nav{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+      padding:16px 24px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      font-weight:800;
+      letter-spacing:.3px;
+      font-size:1.125rem;
+      transition: transform 0.2s ease;
+    }
+    
+    .brand:hover{
+      transform: scale(1.02);
+    }
+    
+    .brand-badge{
+      width:40px;
+      height:40px;
+      border-radius:12px;
+      background:linear-gradient(135deg,var(--brand),var(--brand-2));
+      display:grid;
+      place-items:center;
+      box-shadow:var(--shadow-glow);
+      transition: all 0.3s ease;
+    }
+    
+    .brand-badge:hover{
+      transform: rotate(360deg);
+      box-shadow: 0 0 40px rgba(125,211,252,.4);
+    }
+    
+    .brand-badge span{font-weight:800;color:#0b1220}
+    
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:12px;
+      border:1px solid rgba(42,59,90,0.8); 
+      padding:12px 18px;
+      border-radius:999px;
+      background:var(--glass-bg);
+      backdrop-filter: blur(10px);
+      font-size: 0.9rem;
+      transition: all 0.3s ease;
+    }
+    
+    .pill:hover{
+      border-color: var(--brand);
+      background: rgba(125,211,252,0.1);
+      transform: translateY(-1px);
+    }
+    
+    .pill small{color:var(--muted)}
+    
+    .cta-btn{
+      border:none;
+      background:linear-gradient(135deg,var(--accent),var(--brand));
+      color:#071224;
+      font-weight:800;
+      padding:14px 24px;
+      border-radius:999px;
+      cursor:pointer;
+      box-shadow:var(--shadow-glow);
+      transition:all .3s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .cta-btn::before{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: left 0.5s ease;
+    }
+    
+    .cta-btn:hover::before{
+      left: 100%;
+    }
+    
+    .cta-btn:hover{
+      transform:translateY(-2px) scale(1.05);
+      box-shadow:0 20px 50px rgba(125,211,252,.4);
+    }
+
+    /* Enhanced Hero with better animations */
+    .hero{
+      position:relative;
+      padding:100px 0 60px;
+      display:grid;
+      grid-template-columns:1.2fr 1fr;
+      gap:40px;
+      align-items:center;
+      margin-top: 80px;
+    }
+    
+    .hero-card{
+      background:var(--glass-bg);
+      border:1px solid var(--glass-border);
+      border-radius:var(--radius-3xl);
+      box-shadow:var(--shadow);
+      padding:40px;
+      position:relative;
+      overflow:hidden;
+      backdrop-filter: blur(20px);
+      transition: all 0.4s ease;
+    }
+    
+    .hero-card::before{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--brand), transparent);
+      opacity: 0.6;
+    }
+    
+    .hero-card:hover{
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-hover);
+      border-color: rgba(125,211,252,0.3);
+    }
+    
+    .hero h1{
+      font-size:clamp(2.5rem,4vw,3.5rem);
+      line-height:1.1;
+      margin:12px 0 20px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+    
+    .hero p{
+      color:var(--muted);
+      font-size:clamp(1rem,1.3vw,1.15rem);
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+    
+    .badges{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      margin:0 0 20px;
+    }
+    
+    .badge{
+      font-weight:700;
+      font-size:.8rem;
+      padding:10px 16px;
+      border-radius:999px;
+      border:1px solid rgba(42,59,90,0.6);
+      background:rgba(14,23,48,0.8);
+      backdrop-filter: blur(10px);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .badge::before{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(125,211,252,0.1), transparent);
+      transition: left 0.6s ease;
+    }
+    
+    .badge:hover{
+      border-color: var(--brand);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(125,211,252,0.2);
+    }
+    
+    .badge:hover::before{
+      left: 100%;
+    }
+
+    /* Enhanced product image */
+    .hero-media{
+      position:relative;
+      animation: fadeInUp 1s ease 0.5s both;
+    }
+    
+    @keyframes fadeInUp{
+      from{
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to{
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .product-shot{
+      aspect-ratio: 4/5;
+      width:100%;
+      border-radius:var(--radius-3xl);
+      border:1px solid var(--glass-border);
+      box-shadow:var(--shadow);
+      background:
+        radial-gradient(800px 400px at 50% 0%, rgba(125,211,252,0.15), transparent 70%),
+        url('https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=80&w=1200&auto=format&fit=crop') center/cover no-repeat;
+      position:relative;
+      overflow:hidden;
+      transition: all 0.4s ease;
+      cursor: pointer;
+    }
+    
+    .product-shot::before{
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(45deg, transparent 30%, rgba(125,211,252,0.1) 50%, transparent 70%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    
+    .product-shot:hover{
+      transform: scale(1.02) rotateY(5deg);
+      box-shadow: 0 30px 70px rgba(0,0,0,.4);
+    }
+    
+    .product-shot:hover::before{
+      opacity: 1;
+    }
+    
+    .ribbon{
+      position:absolute;
+      top:20px;
+      left:20px;
+      background:linear-gradient(135deg,var(--brand),var(--accent));
+      color:#061224;
+      font-weight:800;
+      padding:10px 16px;
+      border-radius:12px;
+      box-shadow: var(--shadow);
+      animation: pulse 2s ease-in-out infinite;
+    }
+    
+    @keyframes pulse{
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+    
+    .price{
+      position:absolute;
+      bottom:20px;
+      right:20px;
+      background:var(--glass-bg);
+      border:1px solid var(--glass-border);
+      padding:12px 16px;
+      border-radius:16px;
+      font-weight:800;
+      backdrop-filter: blur(15px);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-cta{
+      display:flex;
+      gap:16px;
+      flex-wrap:wrap;
+      margin-top:24px;
+    }
+    
+    .btn-primary{
+      background:linear-gradient(135deg,var(--brand),var(--accent));
+      color:#061224;
+      font-weight:800;
+      padding:16px 32px;
+      border-radius:999px;
+      border:none;
+      cursor:pointer;
+      font-size: 1rem;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .btn-primary::before{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+      transition: left 0.6s ease;
+    }
+    
+    .btn-primary:hover{
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 15px 40px rgba(125,211,252,0.4);
+    }
+    
+    .btn-primary:hover::before{
+      left: 100%;
+    }
+    
+    .btn-ghost{
+      background:transparent;
+      border:2px solid var(--glass-border);
+      color:var(--text);
+      font-weight:700;
+      padding:14px 30px;
+      border-radius:999px;
+      cursor:pointer;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+    }
+    
+    .btn-ghost:hover{
+      border-color: var(--brand);
+      background: rgba(125,211,252,0.1);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(125,211,252,0.2);
+    }
+
+    /* Enhanced cards with hover effects */
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:24px;
+      margin:50px 0;
+    }
+    
+    .card{
+      background:var(--glass-bg);
+      border:1px solid var(--glass-border);
+      border-radius:var(--radius-2xl);
+      box-shadow:var(--shadow);
+      padding:28px;
+      backdrop-filter: blur(15px);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .card::before{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--brand), var(--accent), var(--brand-2));
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+    
+    .card:hover{
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-hover);
+      border-color: rgba(125,211,252,0.3);
+    }
+    
+    .card:hover::before{
+      transform: scaleX(1);
+    }
+    
+    .card h3{
+      margin:0 0 12px;
+      font-size:1.2rem;
+      font-weight: 700;
+    }
+    
+    .card p{
+      margin:0;
+      color:var(--muted);
+      font-size:1rem;
+      line-height: 1.6;
+    }
+
+    /* Enhanced split section */
+    .split{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:40px;
+      align-items:center;
+      margin:60px 0;
+    }
+    
+    .split .media{
+      aspect-ratio:16/10;
+      border-radius:var(--radius-3xl);
+      border:1px solid var(--glass-border);
+      background:url('https://images.unsplash.com/photo-1603715749721-1c59bdfd1239?q=80&w=1200&auto=format&fit=crop') center/cover no-repeat;
+      box-shadow:var(--shadow);
+      transition: all 0.4s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .split .media::after{
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(45deg, transparent 40%, rgba(125,211,252,0.1) 50%, transparent 60%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    
+    .split .media:hover{
+      transform: scale(1.03);
+      box-shadow: var(--shadow-hover);
+    }
+    
+    .split .media:hover::after{
+      opacity: 1;
+    }
+    
+    .split .copy h2{
+      margin:0 0 16px;
+      font-size:2rem;
+      font-weight: 800;
+      line-height: 1.2;
+    }
+    
+    .split .copy p{
+      color: var(--muted);
+      font-size: 1.1rem;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+    
+    .kpi{
+      display:flex;
+      gap:16px;
+      flex-wrap:wrap;
+      margin-top:20px;
+    }
+    
+    .kpi .pill{
+      background:rgba(14,23,48,0.8);
+      border-color:var(--glass-border);
+      font-weight: 700;
+    }
+
+    /* Enhanced testimonials */
+    .testimonials{
+      display:grid;
+      grid-template-columns:1fr 1fr 1fr;
+      gap:24px;
+      margin:60px 0;
+    }
+    
+    .quote{
+      background:var(--glass-bg);
+      border:1px solid var(--glass-border);
+      border-radius:var(--radius-2xl);
+      padding:28px;
+      box-shadow:var(--shadow);
+      backdrop-filter: blur(15px);
+      transition: all 0.3s ease;
+      position: relative;
+    }
+    
+    .quote::before{
+      content: '"';
+      position: absolute;
+      top: 10px;
+      left: 20px;
+      font-size: 4rem;
+      color: var(--brand);
+      opacity: 0.1;
+      font-family: serif;
+    }
+    
+    .quote:hover{
+      transform: translateY(-5px) scale(1.02);
+      box-shadow: var(--shadow-hover);
+      border-color: rgba(125,211,252,0.3);
+    }
+    
+    .stars{
+      letter-spacing:3px;
+      color: var(--warning);
+      margin-bottom: 16px;
+      font-size: 1.1rem;
+    }
+    
+    .quote p:first-of-type{
+      font-style: italic;
+      font-size: 1.05rem;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    
+    .avatar{
+      width:40px;
+      height:40px;
+      border-radius:50%;
+      background:linear-gradient(135deg, var(--brand), var(--brand-2));
+      display:inline-block;
+      margin-right:12px;
+      vertical-align:middle;
+      box-shadow: var(--shadow);
+    }
+
+    /* Enhanced CTA banner */
+    .cta-banner{
+      margin:60px 0;
+      padding:40px;
+      border-radius:var(--radius-3xl);
+      border:2px solid transparent;
+      background:
+        linear-gradient(var(--glass-bg), var(--glass-bg)) padding-box,
+        linear-gradient(135deg,var(--brand),var(--brand-2),var(--accent)) border-box;
+      box-shadow:var(--shadow-hover);
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:24px;
+      flex-wrap:wrap;
+      backdrop-filter: blur(20px);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .cta-banner::before{
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: conic-gradient(from 0deg, transparent, rgba(125,211,252,0.1), transparent);
+      animation: rotate 10s linear infinite;
+      pointer-events: none;
+    }
+    
+    @keyframes rotate{
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    
+    .cta-banner h3{
+      margin:0;
+      font-size: 1.5rem;
+      font-weight: 800;
+      position: relative;
+      z-index: 2;
+    }
+    
+    .cta-banner > div{
+      display: flex;
+      gap: 16px;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Enhanced footer */
+    footer{
+      margin:40px 0 20px;
+      color:#9db0c6;
+      font-size:.95rem;
+      text-align: center;
+      padding: 20px 0;
+      border-top: 1px solid var(--glass-border);
+    }
+
+    /* Scroll animations */
+    .fade-in{
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease;
+    }
+    
+    .fade-in.visible{
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Responsive enhancements */
+    @media (max-width: 1024px){
+      .hero{grid-template-columns:1fr;gap:30px;}
+      .split{grid-template-columns:1fr;gap:30px;}
+      .grid{grid-template-columns:1fr 1fr;gap:20px;}
+      .testimonials{grid-template-columns:1fr 1fr;gap:20px;}
+      .nav{padding: 14px 20px;}
+      .hero{padding: 80px 0 50px;}
+    }
+    
+    @media (max-width: 768px){
+      .grid,.testimonials{grid-template-columns:1fr;gap:20px;}
+      .hero-cta{flex-direction: column;align-items: stretch;}
+      .hero-cta .btn-primary, .hero-cta .btn-ghost{text-align: center;}
+      .cta-banner{flex-direction: column;text-align: center;}
+      .nav{flex-wrap: wrap;gap: 12px;}
+      .pill{order: 3;width: 100%;justify-content: center;}
+    }
+    
+    @media (max-width: 480px){
+      .container{padding: 16px;}
+      .hero-card, .card, .quote{padding: 20px;}
+      .cta-banner{padding: 24px;}
+    }
+  </style>
+</head>
+<body>
+  <div class="bubble b1"></div>
+  <div class="bubble b2"></div>
+  <div class="bubble b3"></div>
+  <div class="bubble b4"></div>
+  <div class="bubble b5"></div>
+  <div class="bubble b6"></div>
+
+  <header id="header">
+    <div class="nav">
+      <div class="brand">
+        <div class="brand-badge" aria-hidden="true"><span>AP</span></div>
+        AquaPure Lux
+      </div>
+      <div class="pill" aria-label="Key product credentials">
+        <small>Dermatologist-tested</small>
+        <span style="opacity:.5">•</span>
+        <small>Paraben-free</small>
+        <span style="opacity:.5">•</span>
+        <small>pH 5.5</small>
+      </div>
+      <button class="cta-btn">Buy Now</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- HERO -->
+    <section class="hero fade-in" aria-label="Premium soap hero section">
+      <div class="hero-card">
+        <div class="badges">
+          <span class="badge">NEW FORMULA</span>
+          <span class="badge">24H MOISTURE LOCK</span>
+          <span class="badge">HYPOALLERGENIC</span>
+        </div>
+        <h1>Feel the <span style="background:linear-gradient(135deg,var(--brand),var(--accent));-webkit-background-clip:text;background-clip:text;color:transparent">silk-foam</span> difference.</h1>
+        <p>AquaPure Lux is a next‑gen cleansing bar engineered with ceramide microcapsules and cold‑pressed botanical oils for deep hydration, luminous skin, and a spa‑class fragrance signature.</p>
+        <div class="hero-cta">
+          <button class="btn-primary">Shop ₹149</button>
+          <button class="btn-ghost">See Ingredients</button>
+        </div>
+      </div>
+      <div class="hero-media">
+        <figure class="product-shot" role="img" aria-label="AquaPure Lux premium soap with water splashes">
+          <figcaption class="ribbon">Limited Launch</figcaption>
+          <div class="price">Intro Offer: ₹149</div>
+        </figure>
+      </div>
+    </section>
+
+    <!-- VALUE PROPS -->
+    <section aria-label="Core value propositions" class="grid fade-in">
+      <article class="card" aria-label="Hydration">
+        <h3>Deep Hydration</h3>
+        <p>Infused with hyaluronic boosters and ceramides to lock in moisture for up to 24 hours.</p>
+      </article>
+      <article class="card" aria-label="Dermatology">
+        <h3>Clean & Gentle</h3>
+        <p>pH 5.5 formula, sulfate‑free, paraben‑free—ideal for sensitive skin.</p>
+      </article>
+      <article class="card" aria-label="Fragrance">
+        <h3>Signature Aroma</h3>
+        <p>Notes of neroli, white tea, and rain‑washed jasmine for a fresh, modern fragrance.</p>
+      </article>
+    </section>
+
+    <!-- STORY SPLIT -->
+    <section class="split fade-in" aria-label="Brand story">
+      <div class="media" role="img" aria-label="Fresh water and botanicals"></div>
+      <div class="copy">
+        <h2>Dermatologist‑backed. Planet‑minded.</h2>
+        <p>Formulated with responsibly sourced oils and packaged in FSC‑certified, plastic‑reduced cartons. Our supply chain is designed for quality, efficacy, and sustainability—end‑to‑end.</p>
+        <div class="kpi">
+          <div class="pill"><strong>0%</strong>&nbsp;Parabens</div>
+          <div class="pill"><strong>50%</strong>&nbsp;Less Plastic</div>
+          <div class="pill"><strong>24h</strong>&nbsp;Moisture</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials fade-in" aria-label="Customer testimonials">
+      <div class="quote">
+        <div class="stars" aria-hidden="true">★★★★★</div>
+        <p>"Transforms my morning routine—rich lather, zero tightness. Feels premium."</p>
+        <p><span class="avatar"></span><strong>Rhea K.</strong> • Chennai</p>
+      </div>
+      <div class="quote">
+        <div class="stars" aria-hidden="true">★★★★★</div>
+        <p>"Subtle fragrance, strong hydration. My dermatologist approved."</p>
+        <p><span class="avatar"></span><strong>Arjun M.</strong> • Bengaluru</p>
+      </div>
+      <div class="quote">
+        <div class="stars" aria-hidden="true">★★★★★</div>
+        <p>"Skin feels soft all day. The design and packaging are on point."</p>
+        <p><span class="avatar"></span><strong>Neha S.</strong> • Mumbai</p>
+      </div>
+    </section>
+
+    <!-- CTA BANNER -->
+    <section class="cta-banner fade-in" aria-label="Conversion callout">
+      <h3>Ready to upgrade your cleanse?</h3>
+      <div>
+        <button class="btn-primary">Add to Cart</button>
+        <button class="btn-ghost">Find a Store</button>
+      </div>
+    </section>
+
+    <!-- DETAILS / FAQ -->
+    <section class="grid fade-in" aria-label="Details">
+      <article class="card">
+        <h3>Key Ingredients</h3>
+        <p>Ceramide Complex, Cold‑pressed Jojoba & Olive Oils, Vitamin E, Hyaluronic Booster, Gentle Surfactants.</p>
+      </article>
+      <article class="card">
+        <h3>How to Use</h3>
+        <p>Lather with water, massage onto wet skin, rinse thoroughly. For best results, use twice daily.</p>
+      </article>
+      <article class="card">
+        <h3>Safety & Care</h3>
+        <p>For external use only. Avoid eye contact. Patch test advised for ultra‑sensitive skin.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="container">
+    © 2025 AquaPure Labs • Crafted with care • <span style="color:var(--muted)">Mock advertisement page for demo purposes</span>
+  </footer>
+
+  <script>
+    // Enhanced scroll animations and interactions
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, observerOptions);
+
+    // Observe all fade-in elements
+    document.querySelectorAll('.fade-in').forEach(el => {
+      observer.observe(el);
+    });
+
+    // Header scroll effect
+    const header = document.getElementById('header');
+    let lastScrollY = window.scrollY;
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 100) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+      lastScrollY = window.scrollY;
+    });
+
+    // Enhanced button interactions
+    document.querySelectorAll('button').forEach(button => {
+      button.addEventListener('click', function(e) {
+        // Create ripple effect
+        const ripple = document.createElement('span');
+        const rect = this.getBoundingClientRect();
+        const size = Math.max(rect.width, rect.height);
+        const x = e.clientX - rect.left - size / 2;
+        const y = e.clientY - rect.top - size / 2;
+        
+        ripple.style.cssText = `
+          position: absolute;
+          width: ${size}px;
+          height: ${size}px;
+          left: ${x}px;
+          top: ${y}px;
+          background: rgba(255, 255, 255, 0.3);
+          border-radius: 50%;
+          transform: scale(0);
+          animation: ripple 0.6s ease-out;
+          pointer-events: none;
+        `;
+        
+        this.style.position = 'relative';
+        this.style.overflow = 'hidden';
+        this.appendChild(ripple);
+        
+        setTimeout(() => ripple.remove(), 600);
+      });
+    });
+
+    // Add ripple animation
+    const style = document.createElement('style');
+    style.textContent = `
+      @keyframes ripple {
+        to {
+          transform: scale(2);
+          opacity: 0;
+        }
+      }
+    `;
+    document.head.appendChild(style);
+
+    // Product image interaction
+    const productShot = document.querySelector('.product-shot');
+    let isMouseOver = false;
+
+    productShot.addEventListener('mouseenter', () => {
+      isMouseOver = true;
+    });
+
+    productShot.addEventListener('mouseleave', () => {
+      isMouseOver = false;
+      productShot.style.transform = '';
+    });
+
+    productShot.addEventListener('mousemove', (e) => {
+      if (!isMouseOver) return;
+      
+      const rect = productShot.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+      
+      const rotateX = (y - centerY) / centerY * 10;
+      const rotateY = (centerX - x) / centerX * 10;
+      
+      productShot.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Add loading state to CTA buttons
+    document.querySelectorAll('.cta-btn, .btn-primary').forEach(button => {
+      button.addEventListener('click', function() {
+        const originalText = this.textContent;
+        this.style.pointerEvents = 'none';
+        this.textContent = 'Loading...';
+        
+        setTimeout(() => {
+          this.textContent = originalText;
+          this.style.pointerEvents = 'auto';
+        }, 2000);
+      });
+    });
+
+    // Parallax effect for bubbles
+    window.addEventListener('scroll', () => {
+      const scrolled = window.pageYOffset;
+      const bubbles = document.querySelectorAll('.bubble');
+      
+      bubbles.forEach((bubble, index) => {
+        const speed = 0.5 + (index * 0.1);
+        bubble.style.transform = `translateY(${scrolled * speed}px)`;
+      });
+    });
+
+    // Add subtle glow effect to cards on scroll
+    const cards = document.querySelectorAll('.card, .quote');
+    const cardObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.style.boxShadow = 'var(--shadow-glow), var(--shadow)';
+          }, Math.random() * 500);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    cards.forEach(card => cardObserver.observe(card));
+  </script>
+</body>
+</html>
