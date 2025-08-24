@@ -1,0 +1,580 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>AquaPure Lux - Silk-foam Soap</title>
+  <meta name="description" content="A premium, dermatologically-tested soap advertisement page">
+  <style type="text/css">
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #e8ecf1;
+      background-color: #0a0f1e;
+      background-image: url('data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7');
+    }
+    
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+    
+    /* Header */
+    .header {
+      position: relative;
+      background-color: #111936;
+      border: 1px solid #2a3b5a;
+      padding: 16px 24px;
+      margin-bottom: 20px;
+    }
+    
+    .nav {
+      width: 100%;
+    }
+    
+    .nav table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    
+    .nav td {
+      vertical-align: middle;
+      padding: 8px;
+    }
+    
+    .brand {
+      font-weight: bold;
+      font-size: 18px;
+      color: #7dd3fc;
+    }
+    
+    .brand-badge {
+      display: inline-block;
+      width: 40px;
+      height: 20px;
+      background-color: #7dd3fc;
+      color: #0b1220;
+      text-align: center;
+      font-weight: bold;
+      margin-right: 12px;
+    }
+    
+    .pill {
+      background-color: #111936;
+      border: 1px solid #2a3b5a;
+      padding: 12px 18px;
+      font-size: 14px;
+    }
+    
+    .cta-btn {
+      background-color: #22d3ee;
+      color: #071224;
+      font-weight: bold;
+      padding: 14px 24px;
+      border: none;
+      cursor: pointer;
+    }
+    
+    /* Hero Section */
+    .hero {
+      margin: 40px 0;
+    }
+    
+    .hero table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    
+    .hero td {
+      vertical-align: top;
+      padding: 20px;
+    }
+    
+    .hero-card {
+      background-color: #111936;
+      border: 1px solid #2a3b5a;
+      padding: 40px;
+    }
+    
+    .hero h1 {
+      font-size: 48px;
+      line-height: 1.1;
+      margin: 12px 0 20px 0;
+      font-weight: bold;
+    }
+    
+    .hero p {
+      color: #b6c2d0;
+      font-size: 18px;
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+    
+    .badges {
+      margin: 0 0 20px 0;
+    }
+    
+    .badge {
+      display: inline-block;
+      font-weight: bold;
+      font-size: 12px;
+      padding: 10px 16px;
+      background-color: #0e1730;
+      border: 1px solid #2a3b5a;
+      margin-right: 12px;
+      margin-bottom: 8px;
+    }
+    
+    .product-shot {
+      width: 100%;
+      height: 400px;
+      background-color: #2a3b5a;
+      border: 1px solid #2a3b5a;
+      position: relative;
+      background-image: url('https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=80&w=600&auto=format&fit=crop');
+      background-size: cover;
+      background-position: center;
+    }
+    
+    .ribbon {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background-color: #7dd3fc;
+      color: #061224;
+      font-weight: bold;
+      padding: 10px 16px;
+    }
+    
+    .price {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      background-color: #111936;
+      border: 1px solid #2a3b5a;
+      padding: 12px 16px;
+      font-weight: bold;
+    }
+    
+    .hero-cta {
+      margin-top: 24px;
+    }
+    
+    .btn-primary {
+      background-color: #7dd3fc;
+      color: #061224;
+      font-weight: bold;
+      padding: 16px 32px;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      margin-right: 16px;
+    }
+    
+    .btn-ghost {
+      background-color: transparent;
+      border: 2px solid #2a3b5a;
+      color: #e8ecf1;
+      font-weight: bold;
+      padding: 14px 30px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    
+    /* Grid Layout */
+    .grid {
+      margin: 50px 0;
+    }
+    
+    .grid table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    
+    .grid td {
+      width: 33.33%;
+      vertical-align: top;
+      padding: 12px;
+    }
+    
+    .card {
+      background-color: #111936;
+      border: 1px solid #2a3b5a;
+      padding: 28px;
+      height: 150px;
+    }
+    
+    .card h3 {
+      margin: 0 0 12px 0;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    
+    .card p {
+      margin: 0;
+      color: #b6c2d0;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+    
+    /* Split Section */
+    .split {
+      margin: 60px 0;
+    }
+    
+    .split table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    
+    .split td {
+      width: 50%;
+      vertical-align: top;
+      padding: 20px;
+    }
+    
+    .media {
+      width: 100%;
+      height: 300px;
+      border: 1px solid #2a3b5a;
+      background-image: url('https://images.unsplash.com/photo-1603715749721-1c59bdfd1239?q=80&w=600&auto=format&fit=crop');
+      background-size: cover;
+      background-position: center;
+    }
+    
+    .copy h2 {
+      margin: 0 0 16px 0;
+      font-size: 32px;
+      font-weight: bold;
+      line-height: 1.2;
+    }
+    
+    .copy p {
+      color: #b6c2d0;
+      font-size: 18px;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+    
+    .kpi {
+      margin-top: 20px;
+    }
+    
+    .kpi .pill {
+      display: inline-block;
+      background-color: #0e1730;
+      border: 1px solid #2a3b5a;
+      padding: 8px 12px;
+      font-weight: bold;
+      margin-right: 16px;
+      margin-bottom: 8px;
+    }
+    
+    /* Testimonials */
+    .testimonials {
+      margin: 60px 0;
+    }
+    
+    .testimonials table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    
+    .testimonials td {
+      width: 33.33%;
+      vertical-align: top;
+      padding: 12px;
+    }
+    
+    .quote {
+      background-color: #111936;
+      border: 1px solid #2a3b5a;
+      padding: 28px;
+      height: 180px;
+    }
+    
+    .stars {
+      color: #fbbf24;
+      margin-bottom: 16px;
+      font-size: 18px;
+    }
+    
+    .quote p {
+      font-style: italic;
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    
+    .avatar {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      background-color: #7dd3fc;
+      margin-right: 12px;
+      vertical-align: middle;
+    }
+    
+    /* CTA Banner */
+    .cta-banner {
+      margin: 60px 0;
+      padding: 40px;
+      border: 2px solid #7dd3fc;
+      background-color: #111936;
+      text-align: center;
+    }
+    
+    .cta-banner h3 {
+      margin: 0 0 20px 0;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    
+    /* Footer */
+    .footer {
+      margin: 40px 0 20px 0;
+      color: #9db0c6;
+      font-size: 15px;
+      text-align: center;
+      padding: 20px 0;
+      border-top: 1px solid #2a3b5a;
+    }
+    
+    /* Simple hover effects using CSS 2.1 */
+    .btn-primary:hover {
+      background-color: #22d3ee;
+    }
+    
+    .btn-ghost:hover {
+      border-color: #7dd3fc;
+      background-color: #1a2332;
+    }
+    
+    .card:hover {
+      background-color: #1a2332;
+    }
+    
+    .quote:hover {
+      background-color: #1a2332;
+    }
+    
+    /* Responsive using CSS 2.1 media queries */
+    @media screen and (max-width: 768px) {
+      .hero table, .split table, .grid table, .testimonials table {
+        width: 100%;
+      }
+      
+      .hero td, .split td, .grid td, .testimonials td {
+        display: block;
+        width: 100%;
+        padding: 10px 0;
+      }
+      
+      .hero h1 {
+        font-size: 36px;
+      }
+      
+      .card, .quote {
+        height: auto;
+        margin-bottom: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="nav">
+      <table>
+        <tr>
+          <td width="30%">
+            <div class="brand">
+              <span class="brand-badge">AP</span>
+              AquaPure Lux
+            </div>
+          </td>
+          <td width="40%" align="center">
+            <div class="pill">
+              <small>Dermatologist-tested • Paraben-free • pH 5.5</small>
+            </div>
+          </td>
+          <td width="30%" align="right">
+            <button class="cta-btn">Buy Now</button>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- HERO -->
+    <div class="hero">
+      <table>
+        <tr>
+          <td width="60%">
+            <div class="hero-card">
+              <div class="badges">
+                <span class="badge">NEW FORMULA</span>
+                <span class="badge">24H MOISTURE LOCK</span>
+                <span class="badge">HYPOALLERGENIC</span>
+              </div>
+              <h1>Feel the silk-foam difference.</h1>
+              <p>AquaPure Lux is a next-gen cleansing bar engineered with ceramide microcapsules and cold-pressed botanical oils for deep hydration, luminous skin, and a spa-class fragrance signature.</p>
+              <div class="hero-cta">
+                <button class="btn-primary">Shop ₹149</button>
+                <button class="btn-ghost">See Ingredients</button>
+              </div>
+            </div>
+          </td>
+          <td width="40%">
+            <div class="product-shot">
+              <div class="ribbon">Limited Launch</div>
+              <div class="price">Intro Offer: ₹149</div>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- VALUE PROPS -->
+    <div class="grid">
+      <table>
+        <tr>
+          <td>
+            <div class="card">
+              <h3>Deep Hydration</h3>
+              <p>Infused with hyaluronic boosters and ceramides to lock in moisture for up to 24 hours.</p>
+            </div>
+          </td>
+          <td>
+            <div class="card">
+              <h3>Clean &amp; Gentle</h3>
+              <p>pH 5.5 formula, sulfate-free, paraben-free—ideal for sensitive skin.</p>
+            </div>
+          </td>
+          <td>
+            <div class="card">
+              <h3>Signature Aroma</h3>
+              <p>Notes of neroli, white tea, and rain-washed jasmine for a fresh, modern fragrance.</p>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- STORY SPLIT -->
+    <div class="split">
+      <table>
+        <tr>
+          <td>
+            <div class="media"></div>
+          </td>
+          <td>
+            <div class="copy">
+              <h2>Dermatologist-backed. Planet-minded.</h2>
+              <p>Formulated with responsibly sourced oils and packaged in FSC-certified, plastic-reduced cartons. Our supply chain is designed for quality, efficacy, and sustainability—end-to-end.</p>
+              <div class="kpi">
+                <div class="pill"><strong>0%</strong>&nbsp;Parabens</div>
+                <div class="pill"><strong>50%</strong>&nbsp;Less Plastic</div>
+                <div class="pill"><strong>24h</strong>&nbsp;Moisture</div>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- TESTIMONIALS -->
+    <div class="testimonials">
+      <table>
+        <tr>
+          <td>
+            <div class="quote">
+              <div class="stars">★★★★★</div>
+              <p>"Transforms my morning routine—rich lather, zero tightness. Feels premium."</p>
+              <p><span class="avatar"></span><strong>Rhea K.</strong> • Chennai</p>
+            </div>
+          </td>
+          <td>
+            <div class="quote">
+              <div class="stars">★★★★★</div>
+              <p>"Subtle fragrance, strong hydration. My dermatologist approved."</p>
+              <p><span class="avatar"></span><strong>Arjun M.</strong> • Bengaluru</p>
+            </div>
+          </td>
+          <td>
+            <div class="quote">
+              <div class="stars">★★★★★</div>
+              <p>"Skin feels soft all day. The design and packaging are on point."</p>
+              <p><span class="avatar"></span><strong>Neha S.</strong> • Mumbai</p>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- CTA BANNER -->
+    <div class="cta-banner">
+      <h3>Ready to upgrade your cleanse?</h3>
+      <div>
+        <button class="btn-primary">Add to Cart</button>
+        <button class="btn-ghost">Find a Store</button>
+      </div>
+    </div>
+
+    <!-- DETAILS -->
+    <div class="grid">
+      <table>
+        <tr>
+          <td>
+            <div class="card">
+              <h3>Key Ingredients</h3>
+              <p>Ceramide Complex, Cold-pressed Jojoba &amp; Olive Oils, Vitamin E, Hyaluronic Booster, Gentle Surfactants.</p>
+            </div>
+          </td>
+          <td>
+            <div class="card">
+              <h3>How to Use</h3>
+              <p>Lather with water, massage onto wet skin, rinse thoroughly. For best results, use twice daily.</p>
+            </div>
+          </td>
+          <td>
+            <div class="card">
+              <h3>Safety &amp; Care</h3>
+              <p>For external use only. Avoid eye contact. Patch test advised for ultra-sensitive skin.</p>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="footer">
+    © 2025 AquaPure Labs • Crafted with care • Mock advertisement page for demo purposes
+  </div>
+
+  <script type="text/javascript">
+    // Simple JavaScript compatible with older browsers
+    function addHoverEffect() {
+      // Simple rollover effects
+      var buttons = document.getElementsByTagName('button');
+      for (var i = 0; i < buttons.length; i++) {
+        buttons[i].onclick = function() {
+          alert('Button clicked! This would redirect to purchase page.');
+          return false;
+        };
+      }
+    }
+    
+    // Initialize when page loads
+    if (window.addEventListener) {
+      window.addEventListener('load', addHoverEffect, false);
+    } else if (window.attachEvent) {
+      window.attachEvent('onload', addHoverEffect);
+    } else {
+      window.onload = addHoverEffect;
+    }
+  </script>
+</body>
+</html>
